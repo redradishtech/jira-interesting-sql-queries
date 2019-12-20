@@ -1,4 +1,6 @@
 -- A giant table of worklog hours per day, for each day of the month, selectable by user, year and month
+-- https://www.redradishtech.com/display/~jturner/2019/12/19/A+monthly+worklog+report+within+Confluence?moved=true
+create schema if not exists queries;
 create or replace view queries.worklog_monthly AS
 select * from (
 	select user_name, email_address, year, month
