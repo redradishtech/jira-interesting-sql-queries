@@ -1,4 +1,6 @@
 -- A giant table of worklog hours per day, for each day of the month, selectable by user, year and month
+-- See https://www.redradishtech.com/display/KB/Creating+interactive+Jira+reports+in+Confluence+using+free+tools
+create schema if not exists queries;
 create or replace view queries.worklog_monthly AS
 select * from (
 	select user_name, email_address, year, month
@@ -94,4 +96,4 @@ select * from (
 ) q
 order by month_total desc
 ;
-grant select on queries.worklog_monthly to jira_ro;
+grant select on queries.worklog_monthly to jira_queries_readonly;
