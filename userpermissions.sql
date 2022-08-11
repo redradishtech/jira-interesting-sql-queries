@@ -1,4 +1,5 @@
 -- Iterates through all permission schemes, and prints the users granted permissions. This involves dereferencing group and role memberships.
+-- Upstream source: https://github.com/redradishtech/jira-interesting-sql-queries/blob/master/userpermissions.sql
 -- @requires queries
 -- @provides queries.userpermissions
 create or replace view queries.userpermissions AS
